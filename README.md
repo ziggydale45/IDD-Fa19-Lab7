@@ -41,7 +41,8 @@ I was able to successfully install the gm node package. My goal was to get the c
 
 Per the GM documentation, I added 
 
-```var fs = require('fs')
+```
+var fs = require('fs')
   , gm = require('gm');
   ```
  to the top of my file and added
