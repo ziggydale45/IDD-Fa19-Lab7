@@ -10,8 +10,7 @@ Usage: This file is called automatically when the webpage is served.
 
 // WebSocket connection setup
 var socket = io();
-var fs = require('fs')
-  , gm = require('gm');
+
 
 // send out LedOn message over socket
 function ledON() {
