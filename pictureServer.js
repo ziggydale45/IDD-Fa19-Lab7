@@ -132,12 +132,12 @@ io.on('connect', function(socket) {
             io.emit('newPicture', (imageName + '.jpg')); ///Lastly, the new name is send to the client web browser.
             /// The browser will take this new name and load the picture from the public folder.
             // The path can be either a local path or an url
-        imageToAscii("https://simple.wikipedia.org/wiki/Middle_finger", (err, converted) => {
+        imageToAscii("https://simple.wikipedia.org/wiki/Middle_finger#/media/File:Middle_finger_BNC.jpg", (err, converted) => {
             console.log(err || converted);
         });
  
 // Passing options
-        imageToAscii("https://simple.wikipedia.org/wiki/Middle_finger", {
+        imageToAscii("https://simple.wikipedia.org/wiki/Middle_finger#/media/File:Middle_finger_BNC.jpg", {
             colored: false
         }, (err, converted) => {
             console.log(err || converted);
