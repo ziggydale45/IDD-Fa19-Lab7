@@ -138,12 +138,12 @@ io.on('connect', function(socket) {
             io.emit('newPicture', (imageName + '.jpg')); ///Lastly, the new name is send to the client web browser.
             /// The browser will take this new name and load the picture from the public folder.
             // The path can be either a local path or an url
-        imageToAscii("https://octodex.github.com/images/octofez.png", (err, converted) => {
+        imageToAscii("/home/pi/IDD-Fa19-Lab7/public", (err, converted) => {
             console.log(err || converted);
         });
  
 // Passing options
-        imageToAscii("https://octodex.github.com/images/privateinvestocat.jpg", {
+        imageToAscii("/home/pi/IDD-Fa19-Lab7/public", {
             colored: false
         }, (err, converted) => {
             console.log(err || converted);
