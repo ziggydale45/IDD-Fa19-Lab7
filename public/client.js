@@ -29,7 +29,8 @@ function takePicture(){
 //-- Addition: This function receives the new image name and applies it to html element.
 
 socket.on('newPicture', function(msg) {
-  document.getElementById('pictureContainer').src=msg;
+  document.getElementById('pictureContainer').src=msg+'1.jpg';
+  document.getElementById('pictureContainer2').src=msg+'2.jpg';
 });
 // read the data from the message that the server sent and change the
 // background of the webpage based on the data in the message
