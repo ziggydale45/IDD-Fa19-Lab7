@@ -1,24 +1,18 @@
 /*
 server.js
-
 Authors:David Goedicke (da.goedicke@gmail.com) & Nikolas Martelaro (nmartelaro@gmail.com)
-
 This code is heavily based on Nikolas Martelaroes interaction-engine code (hence his authorship).
 The  original purpose was:
 This is the server that runs the web application and the serial
 communication with the micro controller. Messaging to the micro controller is done
 using serial. Messaging to the webapp is done using WebSocket.
-
 //-- Additions:
 This was extended by adding webcam functionality that takes images remotely.
-
 Usage: node server.js SERIAL_PORT (Ex: node server.js /dev/ttyUSB0)
-
 Notes: You will need to specify what port you would like the webapp to be
 served from. You will also need to include the serial port address as a command
 line input.
 */
-
 const imageToAscii = require("image-to-ascii");
 var express = require('express'); // web server application
 var app = express(); // webapp
@@ -137,17 +131,6 @@ io.on('connect', function(socket) {
         NodeWebcam.capture('public/' + imageName, opts, function(err, data) {
             io.emit('newPicture', (imageName + '.jpg')); ///Lastly, the new name is send to the client web browser.
             /// The browser will take this new name and load the picture from the public folder.
-            // The path can be either a local path or an url
-        imageToAscii("https://simple.wikipedia.org/wiki/Middle_finger#/media/File:Middle_finger_BNC.jpg", (err, converted) => {
-            console.log(err || converted);
-        });
- 
-// Passing options
-        imageToAscii("https://simple.wikipedia.org/wiki/Middle_finger#/media/File:Middle_finger_BNC.jpg", {
-            colored: false
-        }, (err, converted) => {
-            console.log(err || converted);
-        });
         });
 
     });
