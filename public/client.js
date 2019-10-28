@@ -29,11 +29,7 @@ function takePicture(){
 //-- Addition: This function receives the new image name and applies it to html element.
 
 socket.on('newPicture', function(msg) {
-  document.getElementById('pictureContainer').src=msg+'1.jpg';
-  document.getElementById('pictureContainer2').src=msg+'2.jpg';
-  document.getElementById('pictureContainer3').src=msg+'3.jpg';
-  document.getElementById('pictureContainer4').src=msg+'4.jpg';
-
+  document.getElementById('pictureContainer').src=msg;
 });
 // read the data from the message that the server sent and change the
 // background of the webpage based on the data in the message
@@ -42,14 +38,13 @@ socket.on('server-msg', function(msg) {
   console.log('msg:', msg);
   switch (msg) {
     case "light":
-      //document.body.style.backgroundColor = "white";
-      console.log("taking pic from button");
-      takePicture();
+      document.body.style.backgroundColor = "white";
+      console.log("white")
       break;
-    //case "dark":
-      //document.body.style.backgroundColor = "black";
-    //  console.log("black");
-    //  break;
+    case "dark":
+      document.body.style.backgroundColor = "black";
+      console.log("black");
+      break;
     default:
       //console.log("something else");
       break;
