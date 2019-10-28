@@ -19,7 +19,6 @@ served from. You will also need to include the serial port address as a command
 line input.
 */
 
-*/
 const imageToAscii = require("image-to-ascii");
 var express = require('express'); // web server application
 var app = express(); // webapp
