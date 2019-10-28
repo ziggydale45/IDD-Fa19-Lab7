@@ -137,6 +137,17 @@ io.on('connect', function(socket) {
         NodeWebcam.capture('public/' + imageName, opts, function(err, data) {
             io.emit('newPicture', (imageName + '.jpg')); ///Lastly, the new name is send to the client web browser.
             /// The browser will take this new name and load the picture from the public folder.
+            // The path can be either a local path or an url
+        imageToAscii("https://octodex.github.com/images/octofez.png", (err, converted) => {
+            console.log(err || converted);
+        });
+ 
+// Passing options
+        imageToAscii("https://octodex.github.com/images/privateinvestocat.jpg", {
+            colored: false
+        }, (err, converted) => {
+            console.log(err || converted);
+        });
         });
 
     });
