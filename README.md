@@ -63,3 +63,22 @@ gm('/path/to/my/img.jpg')
 with the appropriate file path `/home/pi/IDD-Fa19-Lab7/public`.
 
 Unfortunately, when I added this, I lost the ability to take pictures and wasn't able to fix it. 
+
+I also tried to get my camera to print out the image as ASCII by adding: 
+
+```
+ imageToAscii("/home/pi/IDD-Fa19-Lab7/public/MonOct282019142827GMT0700PacificDaylightTime.jpg", (err, converted) => {
+            console.log(err || converted);
+        });
+ 
+// Passing options
+        imageToAscii("/home/pi/IDD-Fa19-Lab7/public/MonOct282019142827GMT0700PacificDaylightTime.jpg", {
+            colored: false
+        }, (err, converted) => {
+            console.log(err || converted);
+        });
+        });
+  ```
+  I was able to get the ASCII image to print in the terminal, but not on my webpage
+        
+ I 
