@@ -132,12 +132,12 @@ io.on('connect', function(socket) {
             io.emit('newPicture', (imageName + '.jpg')); ///Lastly, the new name is send to the client web browser.
             /// The browser will take this new name and load the picture from the public folder.
             // The path can be either a local path or an url
-        imageToAscii("/home/pi/IDD-Fa19-Lab7/public/MonOct282019142827GMT0700PacificDaylightTime.jpg", (err, converted) => {
+        imageToAscii("/home/pi/IDD-Fa19-Lab7/public/" + "imageName" + ".jpg", (err, converted) => {
             console.log(err || converted);
         });
  
 // Passing options
-        imageToAscii("/home/pi/IDD-Fa19-Lab7/public/MonOct282019142827GMT0700PacificDaylightTime.jpg", {
+        imageToAscii("/home/pi/IDD-Fa19-Lab7/public/" + "imageName" + ".jpg", {
             colored: false
         }, (err, converted) => {
             console.log(err || converted);
