@@ -79,6 +79,23 @@ I also tried to get my camera to print out the image as ASCII by adding:
         });
         });
   ```
+  
+  which was later changed to
+  
+  ```   imageToAscii("/home/pi/IDD-Fa19-Lab7/public/" + imageName + ".jpg", (err, converted) => {
+            console.log(err || converted);
+        });
+ 
+// Passing options
+        imageToAscii("/home/pi/IDD-Fa19-Lab7/public/" + imageName + ".jpg", {
+            colored: false
+        }, (err, converted) => {
+            console.log(err || converted);
+        });
+        });
+ ```
+  to retrieve the most recent image. 
+  
   I was able to get the ASCII image to print in the terminal, but not on my webpage
         
- I 
+ [ASCII Vid](https://youtu.be/KKCSEkvaV0k)
