@@ -82,7 +82,9 @@ I also tried to get my camera to print out the image as ASCII by adding:
   
   which was later changed to
   
-  ```   imageToAscii("/home/pi/IDD-Fa19-Lab7/public/" + imageName + ".jpg", (err, converted) => {
+  ```   
+  
+  imageToAscii("/home/pi/IDD-Fa19-Lab7/public/" + imageName + ".jpg", (err, converted) => {
             console.log(err || converted);
         });
  
