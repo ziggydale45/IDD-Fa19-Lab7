@@ -35,6 +35,8 @@ i adjusted my client file to read
 
 **a. Find, install, and try out a node-based library and try to incorporate into your lab. Document your successes and failures (totally okay!) for your writeup. This will help others in class figure out cool new tools and capabilities.**
 
+please reference the diff.txt file above
+
 **b. Upload a video of your working modified project**
 
 I was able to successfully install the gm node package. My goal was to get the crazytown function to work within my client.js file.
